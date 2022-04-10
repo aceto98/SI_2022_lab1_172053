@@ -1,5 +1,6 @@
 apples x 6
 oranges x 5
 cherries x 4
-milk x 3
+beer x 3
 bread x 2
+chocolate x 1
