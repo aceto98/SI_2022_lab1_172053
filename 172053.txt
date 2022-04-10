@@ -1,0 +1,119 @@
+5.
+    $ vi shopping_list.txt
+    $ git add shopping_list.txt
+    $ git commit shopping_list.txt -m "Add 5 items to the shopping list"
+6.  
+    $ git add shopping_list.txt
+    $ git commit shopping_list.txt -m "Add quantities to the items."
+7.
+    $ git branch branch1
+    $ git branch branch2
+8.
+commit d8d87c36ccb7596cdf1e748f91bfd3f62314dad0 (HEAD -> master, branch2, branch1)
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 16:58:59 2022 +0200
+
+    Add quantities to the items
+
+commit 784f6be5b78ddb9a7a513d4ad05efac9f2d889f0
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 16:55:08 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 0f842d4d6e53cd3e5d880c01ac205960a0f6a447 (origin/master, origin/HEAD)
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 16:50:35 2022 +0200
+
+    Initial commit
+
+9.
+    $ git push origin master branch1 branch2
+10.
+    $ git checkout branch1
+11.
+    $ git add shopping_list.txt
+    $ git commit shopping_list.txt -m "Change quantity of item #5"
+12.
+    $ git checkout master
+13.
+    $ git add shopping_list.txt
+    $ git commit shopping_list.txt -m "Change quantity of item #2"
+14.
+    $ git push origin master branch1 branch2
+15.
+    $ git checkout branch2
+16.
+    $ git add shopping_list.txt
+    $ git commit shopping_list.txt -m "Modify item #4"
+17.
+commit 82ec8502bdcc86a334ca50ca2317d093fac88e20 (HEAD -> branch2)
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 17:31:56 2022 +0200
+
+    Modify item #4
+
+commit d8d87c36ccb7596cdf1e748f91bfd3f62314dad0 (origin/branch2)
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 16:58:59 2022 +0200
+
+    Add quantities to the items
+
+commit 784f6be5b78ddb9a7a513d4ad05efac9f2d889f0
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 16:55:08 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 0f842d4d6e53cd3e5d880c01ac205960a0f6a447
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 16:50:35 2022 +0200
+
+    Initial commit
+
+18.
+    $ git add shopping_list.txt
+    $ git commit --amend -m "Modify item #4 and add item #6"
+19.
+commit 582787633122438d5374cf000dff4e931897de68 (HEAD -> branch2)
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 17:31:56 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit d8d87c36ccb7596cdf1e748f91bfd3f62314dad0 (origin/branch2)
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 16:58:59 2022 +0200
+
+    Add quantities to the items
+
+commit 784f6be5b78ddb9a7a513d4ad05efac9f2d889f0
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 16:55:08 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 0f842d4d6e53cd3e5d880c01ac205960a0f6a447
+Author: aceto98 <a.jovanov098@yahoo.com>
+Date:   Sun Apr 10 16:50:35 2022 +0200
+
+    Initial commit
+20.
+    $ git checkout master
+    $ git merge branch1
+    Merge-ot se izvrsi rekurzivno so takanarecen hard commit
+21.
+    $ git merge branch2
+    Se pojavi konflikt se zadrzuvaat podatocite vo branch2
+    $ git add shopping_list.txt
+    $ git merge --continue
+    Merge-ot se izvrsi rekurzivno so takanarecen hard commit
+22.
+    $ git add README.md 172053.txt
+    $ git commit README.md 172053.txt -m "Add docs"
+23.
+    $ git push origin master branch1 branch2
+
+
+
+
